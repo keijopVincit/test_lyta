@@ -1,359 +1,238 @@
-// [AIV_SHORT]  Build version: 1.8.3 - Tuesday, January 23rd, 2024, 12:20:22 PM  
- /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ./src/polyfill/custom_event_ie.js */ "./src/polyfill/custom_event_ie.js");
-
-__webpack_require__(/*! ./src/polyfill/intersection_observer.js */ "./src/polyfill/intersection_observer.js");
-
-__webpack_require__(/*! ./src/js/lyta.js */ "./src/js/lyta.js");
-
-__webpack_require__(/*! ./src/js/outstream.js */ "./src/js/outstream.js");
-
-__webpack_require__(/*! ./src/js/lazyload.min.js */ "./src/js/lazyload.min.js");
-
-/***/ }),
+/*** lyta-adloader - 1.8.4 | Thu Jan 25 2024 08:58:54 GMT+0200 (Eastern European Standard Time) ***/
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/js/lazyload.min.js":
 /*!********************************!*\
   !*** ./src/js/lazyload.min.js ***!
   \********************************/
-/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof2(obj) { "@babel/helpers - typeof"; return _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof2(obj); }
-
-function _extends() {
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _extends() {
   return (_extends = Object.assign || function (t) {
     for (var e = 1; e < arguments.length; e++) {
       var n = arguments[e];
-
-      for (var o in n) {
-        Object.prototype.hasOwnProperty.call(n, o) && (t[o] = n[o]);
-      }
+      for (var o in n) Object.prototype.hasOwnProperty.call(n, o) && (t[o] = n[o]);
     }
-
     return t;
   }).apply(this, arguments);
 }
-
 function _typeof(t) {
-  return (_typeof = "function" == typeof Symbol && "symbol" == _typeof2(Symbol.iterator) ? function (t) {
-    return _typeof2(t);
+  return (_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t) {
+    return typeof t;
   } : function (t) {
-    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : _typeof2(t);
+    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
   })(t);
 }
-
 !function (t, e) {
-  "object" === ( false ? undefined : _typeof(exports)) && "undefined" != typeof module ? module.exports = e() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (e),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
+  "object" === ( false ? 0 : _typeof(exports)) && "undefined" != "object" ? module.exports = e() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (e),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+		__WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : 0;
 }(this, function () {
   "use strict";
 
   var t = "undefined" != typeof window,
-      e = t && !("onscroll" in window) || "undefined" != typeof navigator && /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),
-      n = t && "IntersectionObserver" in window,
-      o = t && "classList" in document.createElement("p"),
-      r = {
-    elements_selector: "img",
-    container: e || t ? document : null,
-    threshold: 300,
-    thresholds: null,
-    data_src: "src",
-    data_srcset: "srcset",
-    data_sizes: "sizes",
-    data_bg: "bg",
-    class_loading: "loading",
-    class_loaded: "loaded",
-    class_error: "error",
-    load_delay: 0,
-    auto_unobserve: !0,
-    callback_enter: null,
-    callback_exit: null,
-    callback_reveal: null,
-    callback_loaded: null,
-    callback_error: null,
-    callback_finish: null,
-    use_native: !1
-  },
-      a = function a(t, e) {
-    var n,
+    e = t && !("onscroll" in window) || "undefined" != typeof navigator && /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),
+    n = t && "IntersectionObserver" in window,
+    o = t && "classList" in document.createElement("p"),
+    r = {
+      elements_selector: "img",
+      container: e || t ? document : null,
+      threshold: 300,
+      thresholds: null,
+      data_src: "src",
+      data_srcset: "srcset",
+      data_sizes: "sizes",
+      data_bg: "bg",
+      class_loading: "loading",
+      class_loaded: "loaded",
+      class_error: "error",
+      load_delay: 0,
+      auto_unobserve: !0,
+      callback_enter: null,
+      callback_exit: null,
+      callback_reveal: null,
+      callback_loaded: null,
+      callback_error: null,
+      callback_finish: null,
+      use_native: !1
+    },
+    a = function (t, e) {
+      var n,
         o = new t(e);
-
-    try {
-      n = new CustomEvent("LazyLoad::Initialized", {
-        detail: {
+      try {
+        n = new CustomEvent("LazyLoad::Initialized", {
+          detail: {
+            instance: o
+          }
+        });
+      } catch (t) {
+        (n = document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized", !1, !1, {
           instance: o
-        }
-      });
-    } catch (t) {
-      (n = document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized", !1, !1, {
-        instance: o
-      });
-    }
-
-    window.dispatchEvent(n);
-  };
-
-  var i = function i(t, e) {
-    return t.getAttribute("data-" + e);
-  },
-      s = function s(t, e, n) {
-    var o = "data-" + e;
-    null !== n ? t.setAttribute(o, n) : t.removeAttribute(o);
-  },
-      c = function c(t) {
-    return "true" === i(t, "was-processed");
-  },
-      l = function l(t, e) {
-    return s(t, "ll-timeout", e);
-  },
-      u = function u(t) {
-    return i(t, "ll-timeout");
-  },
-      d = function d(t, e) {
-    t && t(e);
-  },
-      f = function f(t, e) {
-    t._loadingCount += e, 0 === t._elements.length && 0 === t._loadingCount && d(t._settings.callback_finish);
-  },
-      _ = function _(t) {
-    for (var e, n = [], o = 0; e = t.children[o]; o += 1) {
-      "SOURCE" === e.tagName && n.push(e);
-    }
-
-    return n;
-  },
-      v = function v(t, e, n) {
-    n && t.setAttribute(e, n);
-  },
-      g = function g(t, e) {
-    v(t, "sizes", i(t, e.data_sizes)), v(t, "srcset", i(t, e.data_srcset)), v(t, "src", i(t, e.data_src));
-  },
-      m = {
-    IMG: function IMG(t, e) {
-      var n = t.parentNode;
-      n && "PICTURE" === n.tagName && _(n).forEach(function (t) {
+        });
+      }
+      window.dispatchEvent(n);
+    };
+  var i = function (t, e) {
+      return t.getAttribute("data-" + e);
+    },
+    s = function (t, e, n) {
+      var o = "data-" + e;
+      null !== n ? t.setAttribute(o, n) : t.removeAttribute(o);
+    },
+    c = function (t) {
+      return "true" === i(t, "was-processed");
+    },
+    l = function (t, e) {
+      return s(t, "ll-timeout", e);
+    },
+    u = function (t) {
+      return i(t, "ll-timeout");
+    },
+    d = function (t, e) {
+      t && t(e);
+    },
+    f = function (t, e) {
+      t._loadingCount += e, 0 === t._elements.length && 0 === t._loadingCount && d(t._settings.callback_finish);
+    },
+    _ = function (t) {
+      for (var e, n = [], o = 0; e = t.children[o]; o += 1) "SOURCE" === e.tagName && n.push(e);
+      return n;
+    },
+    v = function (t, e, n) {
+      n && t.setAttribute(e, n);
+    },
+    g = function (t, e) {
+      v(t, "sizes", i(t, e.data_sizes)), v(t, "srcset", i(t, e.data_srcset)), v(t, "src", i(t, e.data_src));
+    },
+    m = {
+      IMG: function (t, e) {
+        var n = t.parentNode;
+        n && "PICTURE" === n.tagName && _(n).forEach(function (t) {
+          g(t, e);
+        });
         g(t, e);
-      });
-      g(t, e);
-    },
-    IFRAME: function IFRAME(t, e) {
-      v(t, "src", i(t, e.data_src));
-    },
-    VIDEO: function VIDEO(t, e) {
-      _(t).forEach(function (t) {
+      },
+      IFRAME: function (t, e) {
         v(t, "src", i(t, e.data_src));
-      }), v(t, "src", i(t, e.data_src)), t.load();
-    }
-  },
-      b = function b(t, e) {
-    var n,
+      },
+      VIDEO: function (t, e) {
+        _(t).forEach(function (t) {
+          v(t, "src", i(t, e.data_src));
+        }), v(t, "src", i(t, e.data_src)), t.load();
+      }
+    },
+    b = function (t, e) {
+      var n,
         o,
         r = e._settings,
         a = t.tagName,
         s = m[a];
-    if (s) return s(t, r), f(e, 1), void (e._elements = (n = e._elements, o = t, n.filter(function (t) {
-      return t !== o;
-    })));
-    !function (t, e) {
-      var n = i(t, e.data_src),
+      if (s) return s(t, r), f(e, 1), void (e._elements = (n = e._elements, o = t, n.filter(function (t) {
+        return t !== o;
+      })));
+      !function (t, e) {
+        var n = i(t, e.data_src),
           o = i(t, e.data_bg);
-      n && (t.style.backgroundImage = 'url("'.concat(n, '")')), o && (t.style.backgroundImage = o);
-    }(t, r);
-  },
-      h = function h(t, e) {
-    o ? t.classList.add(e) : t.className += (t.className ? " " : "") + e;
-  },
-      p = function p(t, e, n) {
-    t.addEventListener(e, n);
-  },
-      y = function y(t, e, n) {
-    t.removeEventListener(e, n);
-  },
-      E = function E(t, e, n) {
-    y(t, "load", e), y(t, "loadeddata", e), y(t, "error", n);
-  },
-      w = function w(t, e, n) {
-    var r = n._settings,
+        n && (t.style.backgroundImage = 'url("'.concat(n, '")')), o && (t.style.backgroundImage = o);
+      }(t, r);
+    },
+    h = function (t, e) {
+      o ? t.classList.add(e) : t.className += (t.className ? " " : "") + e;
+    },
+    p = function (t, e, n) {
+      t.addEventListener(e, n);
+    },
+    y = function (t, e, n) {
+      t.removeEventListener(e, n);
+    },
+    E = function (t, e, n) {
+      y(t, "load", e), y(t, "loadeddata", e), y(t, "error", n);
+    },
+    w = function (t, e, n) {
+      var r = n._settings,
         a = e ? r.class_loaded : r.class_error,
         i = e ? r.callback_loaded : r.callback_error,
         s = t.target;
-    !function (t, e) {
-      o ? t.classList.remove(e) : t.className = t.className.replace(new RegExp("(^|\\s+)" + e + "(\\s+|$)"), " ").replace(/^\s+/, "").replace(/\s+$/, "");
-    }(s, r.class_loading), h(s, a), d(i, s), f(n, -1);
-  },
-      I = function I(t, e) {
-    var n = function n(r) {
-      w(r, !0, e), E(t, n, o);
+      !function (t, e) {
+        o ? t.classList.remove(e) : t.className = t.className.replace(new RegExp("(^|\\s+)" + e + "(\\s+|$)"), " ").replace(/^\s+/, "").replace(/\s+$/, "");
+      }(s, r.class_loading), h(s, a), d(i, s), f(n, -1);
     },
+    I = function (t, e) {
+      var n = function n(r) {
+          w(r, !0, e), E(t, n, o);
+        },
         o = function o(r) {
-      w(r, !1, e), E(t, n, o);
-    };
-
-    !function (t, e, n) {
-      p(t, "load", e), p(t, "loadeddata", e), p(t, "error", n);
-    }(t, n, o);
-  },
-      k = ["IMG", "IFRAME", "VIDEO"],
-      A = function A(t, e) {
-    var n = e._observer;
-    z(t, e), n && e._settings.auto_unobserve && n.unobserve(t);
-  },
-      L = function L(t) {
-    var e = u(t);
-    e && (clearTimeout(e), l(t, null));
-  },
-      x = function x(t, e) {
-    var n = e._settings.load_delay,
+          w(r, !1, e), E(t, n, o);
+        };
+      !function (t, e, n) {
+        p(t, "load", e), p(t, "loadeddata", e), p(t, "error", n);
+      }(t, n, o);
+    },
+    k = ["IMG", "IFRAME", "VIDEO"],
+    A = function (t, e) {
+      var n = e._observer;
+      z(t, e), n && e._settings.auto_unobserve && n.unobserve(t);
+    },
+    L = function (t) {
+      var e = u(t);
+      e && (clearTimeout(e), l(t, null));
+    },
+    x = function (t, e) {
+      var n = e._settings.load_delay,
         o = u(t);
-    o || (o = setTimeout(function () {
-      A(t, e), L(t);
-    }, n), l(t, o));
-  },
-      z = function z(t, e, n) {
-    var o = e._settings;
-    !n && c(t) || (k.indexOf(t.tagName) > -1 && (I(t, e), h(t, o.class_loading)), b(t, e), function (t) {
-      s(t, "was-processed", "true");
-    }(t), d(o.callback_reveal, t), d(o.callback_set, t));
-  },
-      O = function O(t) {
-    return !!n && (t._observer = new IntersectionObserver(function (e) {
-      e.forEach(function (e) {
-        return function (t) {
-          return t.isIntersecting || t.intersectionRatio > 0;
-        }(e) ? function (t, e) {
-          var n = e._settings;
-          d(n.callback_enter, t), n.load_delay ? x(t, e) : A(t, e);
-        }(e.target, t) : function (t, e) {
-          var n = e._settings;
-          d(n.callback_exit, t), n.load_delay && L(t);
-        }(e.target, t);
-      });
-    }, {
-      root: (e = t._settings).container === document ? null : e.container,
-      rootMargin: e.thresholds || e.threshold + "px"
-    }), !0);
-    var e;
-  },
-      N = ["IMG", "IFRAME"],
-      C = function C(t, e) {
-    return function (t) {
-      return t.filter(function (t) {
-        return !c(t);
-      });
-    }((n = t || function (t) {
-      return t.container.querySelectorAll(t.elements_selector);
-    }(e), Array.prototype.slice.call(n)));
-    var n;
-  },
-      M = function M(t, e) {
-    this._settings = function (t) {
-      return _extends({}, r, t);
-    }(t), this._loadingCount = 0, O(this), this.update(e);
-  };
-
+      o || (o = setTimeout(function () {
+        A(t, e), L(t);
+      }, n), l(t, o));
+    },
+    z = function (t, e, n) {
+      var o = e._settings;
+      !n && c(t) || (k.indexOf(t.tagName) > -1 && (I(t, e), h(t, o.class_loading)), b(t, e), function (t) {
+        s(t, "was-processed", "true");
+      }(t), d(o.callback_reveal, t), d(o.callback_set, t));
+    },
+    O = function (t) {
+      return !!n && (t._observer = new IntersectionObserver(function (e) {
+        e.forEach(function (e) {
+          return function (t) {
+            return t.isIntersecting || t.intersectionRatio > 0;
+          }(e) ? function (t, e) {
+            var n = e._settings;
+            d(n.callback_enter, t), n.load_delay ? x(t, e) : A(t, e);
+          }(e.target, t) : function (t, e) {
+            var n = e._settings;
+            d(n.callback_exit, t), n.load_delay && L(t);
+          }(e.target, t);
+        });
+      }, {
+        root: (e = t._settings).container === document ? null : e.container,
+        rootMargin: e.thresholds || e.threshold + "px"
+      }), !0);
+      var e;
+    },
+    N = ["IMG", "IFRAME"],
+    C = function (t, e) {
+      return function (t) {
+        return t.filter(function (t) {
+          return !c(t);
+        });
+      }((n = t || function (t) {
+        return t.container.querySelectorAll(t.elements_selector);
+      }(e), Array.prototype.slice.call(n)));
+      var n;
+    },
+    M = function (t, e) {
+      this._settings = function (t) {
+        return _extends({}, r, t);
+      }(t), this._loadingCount = 0, O(this), this.update(e);
+    };
   return M.prototype = {
-    update: function update(t) {
+    update: function (t) {
       var n,
-          o = this,
-          r = this._settings;
+        o = this,
+        r = this._settings;
       (this._elements = C(t, r), !e && this._observer) ? (function (t) {
         return t.use_native && "loading" in HTMLImageElement.prototype;
       }(r) && ((n = this)._elements.forEach(function (t) {
@@ -362,26 +241,23 @@ function _typeof(t) {
         o._observer.observe(t);
       })) : this.loadAll();
     },
-    destroy: function destroy() {
+    destroy: function () {
       var t = this;
       this._observer && (this._elements.forEach(function (e) {
         t._observer.unobserve(e);
       }), this._observer = null), this._elements = null, this._settings = null;
     },
-    load: function load(t, e) {
+    load: function (t, e) {
       z(t, this, e);
     },
-    loadAll: function loadAll() {
+    loadAll: function () {
       var t = this;
-
       this._elements.forEach(function (e) {
         A(e, t);
       });
     }
   }, t && function (t, e) {
-    if (e) if (e.length) for (var n, o = 0; n = e[o]; o += 1) {
-      a(t, n);
-    } else a(t, e);
+    if (e) if (e.length) for (var n, o = 0; n = e[o]; o += 1) a(t, n);else a(t, e);
   }(M, window.lazyLoadOptions), M;
 });
 
@@ -391,51 +267,38 @@ function _typeof(t) {
 /*!************************!*\
   !*** ./src/js/lyta.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+/***/ (() => {
 
 window.Lyta = function () {
-  var _arguments = arguments,
-      _this = this;
-
-  var FORMATID = 0;
-  var ENABLED_FOR_CLIENT = 1;
-  var ADUNIT_NAME = 2;
-  var RESPONSIFY = 3;
-  var DESKTOP_CONTENT_FORMAT_ID = 63814;
-  var BOX_FORMAT_FORMAT_ID = 63002;
-  var MOBILE_CONTENT_FORMAT_ID = BOX_FORMAT_FORMAT_ID;
-  var DESKTOP_PARADE_ID = 63010;
-  var MOBILE_PARADE_ID = 63009;
-  var INTERSTITIAL_ADS = ['interstitiaali', 'mobiiliinterstitiaali'];
-  var SPECIAL_ADS = ['erikoismainos', 'mobiilierikoismainos'];
-  var TOP_ADS = ['ylaparaati', 'mobiiliylaparaati'];
-  var OUT_OF_PAGE_ADS = [].concat(INTERSTITIAL_ADS, SPECIAL_ADS);
-  var PRIORITY_ADS = OUT_OF_PAGE_ADS;
-  var INTERSTITIAL_COOKIE = 'interstitial';
-  var INTERSTITIAL_COOKIE_EXPIRY = 60 * 15; // 15 minutes
-
-  var ELEMENT_FIT_THROTTLE = 50; // Element fit throttle in ms
-
-  var AD_QUEUE_DELAY = 100; // Default delay for queued ads
-
-  var LYTA_UPDATE_EVENT = 'Lyta::Update';
-  var LYTA_THROTTLED_FIT_EVENT = 'Lyta::Fit';
-  var TCF_READY_EVENT = 'Lyta::TCFReady';
-  var LABEL_TIMEOUT = 500;
-  var MAGGIO_APPLICATION_SITE = 'maggio-application';
-  var BELOW_CONTENT_NAME = 'belowcontent';
-  var Lyta = {};
+  const FORMATID = 0;
+  const ENABLED_FOR_CLIENT = 1;
+  const ADUNIT_NAME = 2;
+  const RESPONSIFY = 3;
+  const DESKTOP_CONTENT_FORMAT_ID = 63814;
+  const BOX_FORMAT_FORMAT_ID = 63002;
+  const MOBILE_CONTENT_FORMAT_ID = BOX_FORMAT_FORMAT_ID;
+  const DESKTOP_PARADE_ID = 63010;
+  const MOBILE_PARADE_ID = 63009;
+  const INTERSTITIAL_ADS = ['interstitiaali', 'mobiiliinterstitiaali'];
+  const SPECIAL_ADS = ['erikoismainos', 'mobiilierikoismainos'];
+  const TOP_ADS = ['ylaparaati', 'mobiiliylaparaati'];
+  const OUT_OF_PAGE_ADS = [].concat(INTERSTITIAL_ADS, SPECIAL_ADS);
+  const PRIORITY_ADS = OUT_OF_PAGE_ADS;
+  const INTERSTITIAL_COOKIE = 'interstitial';
+  const INTERSTITIAL_COOKIE_EXPIRY = 60 * 15; // 15 minutes
+  const ELEMENT_FIT_THROTTLE = 50; // Element fit throttle in ms
+  const AD_QUEUE_DELAY = 100; // Default delay for queued ads
+  const LYTA_UPDATE_EVENT = 'Lyta::Update';
+  const LYTA_THROTTLED_FIT_EVENT = 'Lyta::Fit';
+  const TCF_READY_EVENT = 'Lyta::TCFReady';
+  const LABEL_TIMEOUT = 500;
+  const MAGGIO_APPLICATION_SITE = 'maggio-application';
+  const BELOW_CONTENT_NAME = 'belowcontent';
+  let Lyta = {};
   Lyta.initialized = false;
-  Lyta.version = '1.8.3'; // Integration functionality for Relevant Programmatic
+  Lyta.version = "1.8.4"; // Set by webpack.DefinePlugin
+
+  // Integration functionality for Relevant Programmatic
   // To enable Relevant Programmatic on the page, use the following recipe:
   //
   // <script>
@@ -448,7 +311,6 @@ window.Lyta = function () {
   //             stdCall: true, // Needed for separate targeting per format (but might make ads load slower..)
   //         },
   //    ...
-
   var Relevant = {
     use: false,
     // Shorthand for LytaConfig.relevant.enabled
@@ -459,13 +321,11 @@ window.Lyta = function () {
     // queued formats, later requested by Relevant.flushFormats()
     onNoAdCb: null,
     // noad-callback, set by Relevant.setOnNoad()
-    init: function init() {
+    init: function () {
       this.use = this.config.enabled;
-
       if (!this.use) {
         return;
       }
-
       if (this.config.scriptUrl) {
         var script = document.createElement('script');
         script.type = 'text/javascript';
@@ -473,23 +333,21 @@ window.Lyta = function () {
         document.head.appendChild(script);
       }
     },
-    withRelevant: function withRelevant(fn) {
+    withRelevant: function (fn) {
       window.relevantDigital = window.relevantDigital || {};
       relevantDigital.cmd = relevantDigital.cmd || [];
       relevantDigital.cmd.push(fn);
     },
-    setOnNoad: function setOnNoad(cb) {
+    setOnNoad: function (cb) {
       this.onNoAdCb = cb;
-
       if (!this.use) {
         sas.cmd.push(function () {
           sas.events.on("noad", cb);
         });
       }
     },
-    setup: function setup(setupOptions) {
+    setup: function (setupOptions) {
       this.setupOptions = setupOptions;
-
       if (!this.use) {
         sas.cmd.push(function () {
           sas.setup(setupOptions);
@@ -499,10 +357,9 @@ window.Lyta = function () {
     // Use callNow == true to make the call immediately when using Relevant - else
     // the format will be queued until Relevant.flushFormats() is called. Purpose is to
     // avoid multiple calls / auctions for formats that are requested simultaneously.
-    callFormat: function callFormat(params, callNow) {
+    callFormat: function (params, callNow) {
       if (this.use) {
         this.queuedAds.push(params);
-
         if (callNow) {
           this.flushFormats();
         }
@@ -513,15 +370,13 @@ window.Lyta = function () {
       }
     },
     // Triggers a Prebid auction + ad-request(s) for queued formats.
-    flushFormats: function flushFormats() {
+    flushFormats: function () {
       Lyta.group('Relevant: flushFormats ...');
       var formats = this.queuedAds.splice(0);
       Lyta.log(JSON.parse(JSON.stringify(formats)));
-
       if (!formats.length) {
         return;
       }
-
       var that = this;
       this.withRelevant(function () {
         // If LytaConfig.relevant.stdCall is NOT true, then Smart will be called using 'onecall' and
@@ -529,13 +384,11 @@ window.Lyta = function () {
         var fst = formats[0];
         var allowedDivIds = formats.map(function (fmt) {
           var elm = document.getElementById(fmt.tagId);
-
           if (elm) {
             // The Relevant script is using the 'data-ad-unit-id' attribute to read the format-id
             // needed when div id is not on sas_??? format.
             elm.setAttribute('data-ad-unit-id', '' + fmt.formatId);
           }
-
           return fmt.tagId;
         });
         Lyta.log('Relevant: allowedDivIds');
@@ -556,7 +409,7 @@ window.Lyta = function () {
             },
             setup: that.setupOptions,
             stdCall: that.config.stdCall ? formats : null,
-            onLoad: function onLoad(data) {
+            onLoad: function (data) {
               if (!data.hasAd && that.onNoAdCb) {
                 that.onNoAdCb(data);
               }
@@ -571,16 +424,18 @@ window.Lyta = function () {
     }
   };
   Relevant.init();
-  var adFormats = {};
-  var isViewable = false;
-  var queueAds = false;
-  var processAdQueueTimeout = null;
-  var lowPriorityadQueue = [];
-  var highPriorityAdQueue = [];
-  var lazyLoadAds = false;
-  var lazyAdsQueue = {};
-  var useTcf = false;
-  var tcfReady = false; // Create a responsive container and wrapper within an element
+  let adFormats = {};
+  let isViewable = false;
+  let queueAds = false;
+  let processAdQueueTimeout = null;
+  let lowPriorityadQueue = [];
+  let highPriorityAdQueue = [];
+  let lazyLoadAds = false;
+  let lazyAdsQueue = {};
+  let useTcf = false;
+  let tcfReady = false;
+
+  // Create a responsive container and wrapper within an element
   // by given ID (adContainerId)
   //
   // Ad will be loaded in DIV element with ID "adContainerId-wrapper"
@@ -590,18 +445,16 @@ window.Lyta = function () {
   // for its parent container. CSS transformations are used
   // for scaling
 
-  var responsifyAd = function responsifyAd(adContainerId) {
-    var adElement = document.getElementById(adContainerId);
+  const responsifyAd = adContainerId => {
+    const adElement = document.getElementById(adContainerId);
     var naturalHeight = 0;
     var mutationEvent = false;
-
     if (!adElement) {
       return;
     }
-
-    var createWrapper = function createWrapper(elem) {
-      var baseName = elem.id; // Inject container and wrapper to given element
-
+    const createWrapper = elem => {
+      var baseName = elem.id;
+      // Inject container and wrapper to given element
       var container = document.createElement("div");
       var wrapper = document.createElement("div");
       container.id = baseName + "-container";
@@ -610,15 +463,12 @@ window.Lyta = function () {
       adElement.appendChild(container);
       return container;
     };
-
-    var container = createWrapper(adElement);
-
-    var fitElement = function fitElement() {
-      var offsetWidth = container.offsetWidth;
-      var parentNode = container.parentNode;
-      var naturalWidth = container.scrollWidth;
+    const container = createWrapper(adElement);
+    const fitElement = () => {
+      const offsetWidth = container.offsetWidth;
+      const parentNode = container.parentNode;
+      const naturalWidth = container.scrollWidth;
       var height, scale, naturalHeight;
-
       if (offsetWidth >= naturalWidth) {
         // The container fits in viewport, so no need to scale
         // Force overflow: hidden to mitigate cases where wide
@@ -628,73 +478,66 @@ window.Lyta = function () {
         parentNode.style.height = "";
         return;
       }
-
       height = container.scrollHeight;
-
       if (mutationEvent) {
         mutationEvent = false;
-
         if (naturalHeight == height) {
           return;
         }
-
         naturalHeight = height;
-      } // Determine scaling factor
+      }
 
+      // Determine scaling factor
+      scale = Math.min(1, offsetWidth / naturalWidth);
 
-      scale = Math.min(1, offsetWidth / naturalWidth); // Scale down parent node height and ad container
-
+      // Scale down parent node height and ad container
       parentNode.style.height = height * scale + "px";
       container.setAttribute("style", "-webkit-transform: scale(" + scale + ");" + "-moz-transform: scale(" + scale + ");" + "transform: scale(" + scale + ");" + "transform-origin: 0 0");
     };
-
-    var dispatchUpdateEvent = function dispatchUpdateEvent() {
+    const dispatchUpdateEvent = () => {
       var event = new CustomEvent(LYTA_UPDATE_EVENT);
       mutationEvent = true;
       window.dispatchEvent(event);
-    }; // Define MutationObserver for updating ad dimensionson DOM changes
+    };
 
-
-    var observer = new MutationObserver(function (mutationsList) {
+    // Define MutationObserver for updating ad dimensionson DOM changes
+    const observer = new MutationObserver(function (mutationsList) {
       dispatchUpdateEvent();
-
       for (var i = 0; i < mutationsList.length; i++) {
         var mutation = mutationsList[i];
-
         if (mutation.type == 'childList') {
-          Array.prototype.forEach.call(mutation.target.children, function (child) {
+          Array.prototype.forEach.call(mutation.target.children, child => {
             var childOfInterest;
-
             if (child.tagName === "A") {
               childOfInterest = child.getElementsByTagName('IMG')[0];
             }
-
             if (child.tagName === "IFRAME") {
               childOfInterest = child;
             }
-
             if (childOfInterest) {
               childOfInterest.addEventListener('load', dispatchUpdateEvent, false);
             }
           });
         }
       }
-    }); // Begin observing changes in adContainerId container
+    });
 
+    // Begin observing changes in adContainerId container
     observer.observe(document.getElementById(adContainerId), {
       childList: true,
       attributes: false,
       characterData: false,
       subtree: true
-    }); // Bind event handler to fit responsified element on LYTA_THROTTLED_FIT_EVENT
+    });
 
+    // Bind event handler to fit responsified element on LYTA_THROTTLED_FIT_EVENT
     window.addEventListener(LYTA_THROTTLED_FIT_EVENT, fitElement, false);
     return getWrapperId(adContainerId);
-  }; // https://gist.github.com/edwinwebb/e71bde8b00ff40f3f046
+  };
 
-
-  var throttle = function throttle(func, wait, options) {
-    var _ = {
+  // https://gist.github.com/edwinwebb/e71bde8b00ff40f3f046
+  const throttle = (func, wait, options) => {
+    const _ = {
       now: Date.now || function () {
         return new Date().getTime();
       }
@@ -703,72 +546,58 @@ window.Lyta = function () {
     var timeout = null;
     var previous = 0;
     if (!options) options = {};
-
-    var later = function later() {
+    const later = () => {
       previous = options.leading === false ? 0 : _.now();
       timeout = null;
       result = func.apply(context, args);
       if (!timeout) context = args = null;
     };
-
-    return function () {
+    return () => {
       var now = _.now();
-
       if (!previous && options.leading === false) previous = now;
       var remaining = wait - (now - previous);
-      context = _this;
-      args = _arguments;
-
+      context = this;
+      args = arguments;
       if (remaining <= 0 || remaining > wait) {
         if (timeout) {
           clearTimeout(timeout);
           timeout = null;
         }
-
         previous = now;
         result = func.apply(context, args);
         if (!timeout) context = args = null;
       } else if (!timeout && options.trailing !== false) {
         timeout = setTimeout(later, remaining);
       }
-
       return result;
     };
-  }; // Bind event handlers to fit responsified elements on window resize or
+  };
+
+  // Bind event handlers to fit responsified elements on window resize or
   // LYTA_UPDATE_EVENT events.
-
-
-  var dispatchFitEvent = function dispatchFitEvent() {
+  const dispatchFitEvent = () => {
     var event = new CustomEvent(LYTA_THROTTLED_FIT_EVENT);
     window.dispatchEvent(event);
   };
-
-  var throttledFitEvent = throttle(dispatchFitEvent, ELEMENT_FIT_THROTTLE);
+  const throttledFitEvent = throttle(dispatchFitEvent, ELEMENT_FIT_THROTTLE);
   window.addEventListener("resize", throttledFitEvent, false);
   window.addEventListener(LYTA_UPDATE_EVENT, throttledFitEvent, false);
-
-  var getWrapperId = function getWrapperId(containerId) {
+  const getWrapperId = containerId => {
     return containerId + "-wrapper";
   };
-
-  var clientType = function clientType() {
+  const clientType = () => {
     var client = "mobile";
-
     if (typeof window.matchMedia == "function" && window.matchMedia("(min-width: 768px)").matches || typeof window.matchMedia == "undefined" && window.innerWidth >= 768) {
       client = "tablet";
     }
-
     if (typeof window.matchMedia == "function" && window.matchMedia("(min-width: 980px)").matches || typeof window.matchMedia == "undefined" && window.innerWidth >= 980) {
       client = "desktop";
     }
-
     return client;
   };
-
-  var clientPlatform = function clientPlatform() {
+  const clientPlatform = () => {
     var platform = "browser";
     var ua = navigator.userAgent || navigator.vendor;
-
     if (ua.indexOf("FBAN") > -1) {
       platform = "facebook_app";
     } else if (ua.indexOf("Twitter") > -1) {
@@ -776,104 +605,85 @@ window.Lyta = function () {
     } else if (window && window.isMaggioView === true) {
       platform = "maggio";
     }
-
     return platform;
   };
-
-  var isMobile = function isMobile() {
+  const isMobile = () => {
     return clientType() === "mobile";
   };
-
-  var isDesktop = function isDesktop() {
+  const isDesktop = () => {
     return clientType() === "tablet" || clientType() === "desktop";
   };
-
-  var getCookie = function getCookie(name) {
+  const getCookie = name => {
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
   };
-
-  var createCookie = function createCookie(name, value, seconds) {
+  const createCookie = (name, value, seconds) => {
     var expires = "";
-
     if (seconds) {
       var date = new Date();
       date.setTime(date.getTime() + seconds * 1000);
       expires = "; expires=" + date.toUTCString();
     }
-
     document.cookie = name + "=" + value + expires + "; path=/";
   };
-
-  var clearCookie = function clearCookie(name) {
+  const clearCookie = name => {
     createCookie(name, "", -1);
   };
-
-  var canShowAd = function canShowAd(adUnit) {
+  const canShowAd = adUnit => {
     // Care only about out-of-page ad units (interstitial and "special ads")
     if (OUT_OF_PAGE_ADS.indexOf(adUnit) == -1) {
       return true;
-    } // Interstitial requested, and not yet shown
-
-
+    }
+    // Interstitial requested, and not yet shown
     if (INTERSTITIAL_ADS.indexOf(adUnit) > -1 && Lyta.interstitialShown !== INTERSTITIAL_COOKIE) {
       createCookie(INTERSTITIAL_COOKIE, INTERSTITIAL_COOKIE, Lyta.interstitialCookieExpiry);
       return true;
-    } // Special ad requested, interstitial already shown
-
-
+    }
+    // Special ad requested, interstitial already shown
     if (SPECIAL_ADS.indexOf(adUnit) > -1 && Lyta.interstitialShown == INTERSTITIAL_COOKIE) {
       return true;
-    } // Can not show interstitial or special ad unit
-
-
+    }
+    // Can not show interstitial or special ad unit
     return false;
   };
-
-  var getContentFormatID = function getContentFormatID() {
+  const getContentFormatID = () => {
     if (clientType() === "mobile") {
       return MOBILE_CONTENT_FORMAT_ID;
     } else {
       return DESKTOP_CONTENT_FORMAT_ID;
     }
   };
-
-  var getContentAdunitNames = function getContentAdunitNames(position) {
+  const getContentAdunitNames = position => {
     var adUnitNames = ["content_0" + position];
-
     if (clientType() === "mobile") {
       adUnitNames.push("boksi" + position);
     }
-
     return adUnitNames;
   };
-
-  var getContentTopId = function getContentTopId() {
+  const getContentTopId = () => {
     if (clientType() === "mobile") {
       return MOBILE_PARADE_ID;
     } else {
       return DESKTOP_PARADE_ID;
     }
   };
-
-  var getContentTopName = function getContentTopName() {
+  const getContentTopName = () => {
     if (clientType() === "mobile") {
       return "mobiiliylaparaati";
     } else {
       return "ylaparaati";
     }
   };
-
-  var getBelowContentName = function getBelowContentName() {
+  const getBelowContentName = () => {
     var adUnitNames = [BELOW_CONTENT_NAME];
-
     if (clientType() !== "mobile") {
       adUnitNames.push("boksi1");
     }
-
     return adUnitNames;
-  }; // Serialize given obj to a string separated with separator
+  };
+
+  // Serialize given obj to a string separated with separator
   //
   // If the property is an array, each of the array elements
   // will be appended to the string with the name of the property
@@ -884,15 +694,13 @@ window.Lyta = function () {
   // ->
   // example=1;example=2;example=3
 
-
-  var serialize = function serialize(obj, separator) {
+  const serialize = (obj, separator) => {
     var separator = separator || "&";
-    var str = [];
-
-    for (var p in obj) {
+    let str = [];
+    for (let p in obj) {
       if (obj.hasOwnProperty(p)) {
-        if (_typeof(obj[p]) === "object" && obj[p].constructor === Array) {
-          for (var i in obj[p]) {
+        if (typeof obj[p] === "object" && obj[p].constructor === Array) {
+          for (let i in obj[p]) {
             str.push(p + "=" + obj[p][i]);
           }
         } else {
@@ -900,16 +708,16 @@ window.Lyta = function () {
         }
       }
     }
-
     return str.join(separator);
-  }; // Slugify given string
+  };
+
+  // Slugify given string
   // https://gist.github.com/hagemann/382adfc57adbd5af078dc93feef01fe1
 
-
-  var slugify = function slugify(string) {
-    var a = 'àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;';
-    var b = 'aaaaaaaaacccddeeeeeeegghiiiiilmnnnnooooooprrsssssttuuuuuuuuuwxyyzzz------';
-    var p = new RegExp(a.split('').join('|'), 'g');
+  const slugify = string => {
+    const a = 'àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;';
+    const b = 'aaaaaaaaacccddeeeeeeegghiiiiilmnnnnooooooprrsssssttuuuuuuuuuwxyyzzz------';
+    const p = new RegExp(a.split('').join('|'), 'g');
     return string.toString().toLowerCase().replace(/\s+/g, '-') // Replace spaces with -
     .replace(p, function (c) {
       return b.charAt(a.indexOf(c));
@@ -919,145 +727,100 @@ window.Lyta = function () {
     .replace(/\-\-+/g, '-') // Replace multiple - with single -
     .replace(/^-+/, '') // Trim - from start of text
     .replace(/-+$/, ''); // Trim - from end of text
-  }; // Build object for targeting
+  };
 
+  // Build object for targeting
 
-  var targetOptions = function targetOptions(adUnitName, adCallKeywords) {
-    var _window$digitalData, _window$digitalData$p, _window$digitalData$p2;
-
-    var url = document.location.pathname + document.location.search;
-
-    if (typeof ((_window$digitalData = window.digitalData) === null || _window$digitalData === void 0 ? void 0 : (_window$digitalData$p = _window$digitalData.page) === null || _window$digitalData$p === void 0 ? void 0 : (_window$digitalData$p2 = _window$digitalData$p.pageInfo) === null || _window$digitalData$p2 === void 0 ? void 0 : _window$digitalData$p2.locationPathName) === 'string') {
+  const targetOptions = (adUnitName, adCallKeywords) => {
+    let url = document.location.pathname + document.location.search;
+    if (typeof window.digitalData?.page?.pageInfo?.locationPathName === 'string') {
       url = window.digitalData.page.pageInfo.locationPathName;
     }
-
-    var target = {
+    let target = {
       page_type: LytaConfig.target.pageType,
       client: clientType(),
       platform: clientPlatform(),
       url: url,
       adunit: adUnitName
     };
-
     if (typeof LytaConfig.target.adCategory === "string" && LytaConfig.target.adCategory.length > 0) {
       target.category = LytaConfig.target.adCategory;
     }
-
     if (typeof LytaConfig.target.assetId === "string" && LytaConfig.target.assetId.length > 0) {
       target.assetid = LytaConfig.target.assetId;
     }
-
     if (typeof LytaConfig.target.newsSubjects !== "undefined" && LytaConfig.target.newsSubjects.length > 0) {
       target.news_subject = LytaConfig.target.newsSubjects;
     }
-
-    if (_typeof(LytaConfig.target.keywords) === 'object' && LytaConfig.target.keywords.length > 0) {
+    if (typeof LytaConfig.target.keywords === 'object' && LytaConfig.target.keywords.length > 0) {
       target.keyword = target.keyword || [];
-
-      var _iterator = _createForOfIteratorHelper(LytaConfig.target.keywords),
-          _step;
-
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var keyword = _step.value;
-          target.keyword.push(slugify(keyword));
-        }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
+      for (const keyword of LytaConfig.target.keywords) {
+        target.keyword.push(slugify(keyword));
       }
     }
-
-    if (_typeof(adCallKeywords) === 'object' && adCallKeywords.length > 0) {
+    if (typeof adCallKeywords === 'object' && adCallKeywords.length > 0) {
       target.keyword = target.keyword || [];
-
-      var _iterator2 = _createForOfIteratorHelper(adCallKeywords),
-          _step2;
-
-      try {
-        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-          var _keyword = _step2.value;
-          target.keyword.push(slugify(_keyword));
-        }
-      } catch (err) {
-        _iterator2.e(err);
-      } finally {
-        _iterator2.f();
+      for (const keyword of adCallKeywords) {
+        target.keyword.push(slugify(keyword));
       }
     }
-
-    if (_typeof(LytaConfig.target.user) === 'object') {
-      var user = LytaConfig.target.user;
-
+    if (typeof LytaConfig.target.user === 'object') {
+      let user = LytaConfig.target.user;
       if (user.activeSubscriptions) {
         target.subs = user.activeSubscriptions;
       }
-
       target.loggedin = user.signInStatus;
     }
-
     return target;
   };
-
-  var isInitialized = function isInitialized() {
+  const isInitialized = () => {
     return Lyta.initialized;
   };
-
-  var renderQueuedAd = function renderQueuedAd(instance, callNow) {
+  const renderQueuedAd = (instance, callNow) => {
     Relevant.callFormat(instance.adCall, callNow);
-
     if (instance.adLabels) {
       showAdLabels(instance.adUnitWrapper, instance.adContainer);
     }
   };
-
-  var processAdQueue = function processAdQueue(queue, dequeue) {
+  const processAdQueue = (queue, dequeue) => {
     Lyta.group('processAdQueue called ...');
     Lyta.log(JSON.parse(JSON.stringify(queue)));
     var dequeue = dequeue === undefined ? false : dequeue;
-    var queueItem;
-
+    let queueItem;
     if (useTcf && !tcfReady) {
       Lyta.log('... but TCF is not ready for ad queue.');
       window.addEventListener(TCF_READY_EVENT, function () {
-        Lyta.log("processAdQueue triggered by ".concat(TCF_READY_EVENT, " event listener"));
+        Lyta.log(`processAdQueue triggered by ${TCF_READY_EVENT} event listener`);
         processAdQueue(queue, dequeue);
       }, false);
       return Lyta.groupEnd();
     }
-
     if (dequeue) {
       queueAds = false;
       Lyta.log('Ad queuing set to disabled. Further ad loads will no longer be queued.');
     }
-
     Lyta.log('Started processing queued ads.');
     queue.reverse();
-
     while (queueItem = queue.pop()) {
       renderQueuedAd(queueItem, false);
       Lyta.log(queueItem.adUnit + ' called from queue');
     }
-
     Relevant.flushFormats();
     Lyta.groupEnd();
   };
-
-  var tcfCallback = function tcfCallback(tcData, success) {
+  const tcfCallback = (tcData, success) => {
     Lyta.group('tcfCallback');
-
     if (success) {
       if (tcData.eventStatus === 'tcloaded' || tcData.eventStatus === 'useractioncomplete') {
         if (!tcfReady) {
-          Lyta.log('Flagging TCF ready, processing queued ads, and triggering ' + TCF_READY_EVENT); // Flag TCF as ready and process queued ads
-
+          Lyta.log('Flagging TCF ready, processing queued ads, and triggering ' + TCF_READY_EVENT);
+          // Flag TCF as ready and process queued ads
           tcfReady = true;
-          processAdQueue(highPriorityAdQueue, false); // Dispatch TCF_READY_EVENT
-
+          processAdQueue(highPriorityAdQueue, false);
+          // Dispatch TCF_READY_EVENT
           var event = new CustomEvent(TCF_READY_EVENT);
-          window.dispatchEvent(event); // Remove event listener
-
+          window.dispatchEvent(event);
+          // Remove event listener
           __tcfapi('removeEventListener', 2, function (success) {
             if (success) {
               Lyta.log('removed EventListener for tcfCallback');
@@ -1072,23 +835,19 @@ window.Lyta = function () {
     } else {
       Lyta.log('Failed');
     }
-
     Lyta.groupEnd();
   };
-
-  var viewableChangeListener = function viewableChangeListener(viewable) {
+  const viewableChangeListener = viewable => {
     isViewable = viewable;
-
     if (isViewable && queueAds) {
       window.clearTimeout(processAdQueueTimeout);
       processAdQueue(lowPriorityadQueue, true);
     }
-  }; // Process lazy ad
+  };
 
-
-  var processLazyAd = function processLazyAd(adContainerId) {
-    var adCallObject = lazyAdsQueue[adContainerId];
-
+  // Process lazy ad
+  const processLazyAd = adContainerId => {
+    let adCallObject = lazyAdsQueue[adContainerId];
     if (adCallObject) {
       if (useTcf && !tcfReady) {
         Lyta.log('TCF not ready for lazy ad. Queuing instead.');
@@ -1099,77 +858,73 @@ window.Lyta = function () {
         Lyta.log(adContainerId + ' lazy loaded');
       }
     }
-  }; // Show generic ad labels inside ad unit container
+  };
 
+  // Show generic ad labels inside ad unit container
 
-  var showAdLabels = function showAdLabels(wrapperId, adContainer) {
+  const showAdLabels = (wrapperId, adContainer) => {
     showLabelTimeout = window.setTimeout(function () {
-      Lyta.log("Show ad labels after ".concat(LABEL_TIMEOUT, " timeout for ").concat(wrapperId));
-      var element = document.getElementById(wrapperId);
-      var positions = ["beforebegin", "afterend"];
-      var title = {
+      Lyta.log(`Show ad labels after ${LABEL_TIMEOUT} timeout for ${wrapperId}`);
+      let element = document.getElementById(wrapperId);
+      let positions = ["beforebegin", "afterend"];
+      let title = {
         beforebegin: "Juttu jatkuu mainoksen jälkeen",
         afterend: "Juttu jatkuu"
       };
-      var html = '';
-
+      let html = '';
       if (LytaConfig.site == MAGGIO_APPLICATION_SITE && adContainer == BELOW_CONTENT_NAME) {
         positions = ["beforebegin"];
         title = {
           beforebegin: "Mainos"
         };
       }
-
-      for (var i = 0; i < positions.length; i++) {
+      for (let i = 0; i < positions.length; i++) {
         if (!document.getElementById(adContainer + '-label-' + positions[i])) {
           html = '<div id="' + adContainer + '-label-' + positions[i] + '" class="lyta-label-' + positions[i] + '">' + title[positions[i]] + '</div>';
           element.insertAdjacentHTML(positions[i], html);
         }
       }
     }, LABEL_TIMEOUT);
-  }; // Hide generic ad labels inside ad unit container
+  };
 
+  // Hide generic ad labels inside ad unit container
 
-  var hideAdLabels = function hideAdLabels(adContainer) {
+  const hideAdLabels = adContainer => {
     var positions = ["beforebegin", "afterend"];
-
-    for (var i = 0; i < positions.length; i++) {
+    for (let i = 0; i < positions.length; i++) {
       document.getElementById(adContainer + "-label-" + positions[i]).style.display = "none";
     }
-  }; // Insert ad notice above Adform Out-Stream advertisement
+  };
+
+  // Insert ad notice above Adform Out-Stream advertisement
   // when ad is displayed
   // Remove ad notice as advertisement collapses
 
-
-  var setupAdformAdTitle = function setupAdformAdTitle() {
+  const setupAdformAdTitle = () => {
     window._adform = window._adform || [];
-
     _adform.push(["on.init", function (settings) {
-      var lib = Adform.lib;
-      var element = this.container && this.container.get("element");
-      var collapseTimeout = settings.options.hideTime * 1000;
-
+      let lib = Adform.lib;
+      let element = this.container && this.container.get("element");
+      let collapseTimeout = settings.options.hideTime * 1000;
       if (typeof element !== "undefined") {
         this.on("expand", onExpand);
         this.on("collapse", onCollapse);
       }
-
       function onExpand() {
         showAdLabels('contentTop-wrapper', 'contentTop');
       }
-
       function onCollapse() {
         setTimeout(function () {
           hideAdLabels('contentTop');
         }, collapseTimeout);
       }
     }]);
-
     window.addEventListener('adEnd', function (e) {
       hideAdLabels('contentTop');
     });
-  }; // Default format for non-Lorien sites
+  };
 
+  // Default format for non-Lorien sites
 
   adFormats['default'] = {
     // placement_name: [format_id, enabled_for_client, adunit_name, responsify]
@@ -1275,116 +1030,113 @@ window.Lyta = function () {
     ylaparaati: [DESKTOP_PARADE_ID, isDesktop(), "ylaparaati", true],
     mobiiliylaparaati: [MOBILE_PARADE_ID, isMobile(), "mobiiliylaparaati", true]
   };
-
-  Lyta.log = function (message) {
+  Lyta.log = message => {
     if (!LytaConfig.debug) {
       return;
     }
-
     console.log(message);
   };
-
-  Lyta.group = function (group) {
+  Lyta.group = group => {
     if (!LytaConfig.debug) {
       return;
     }
-
     console.group(group);
   };
-
-  Lyta.groupEnd = function () {
+  Lyta.groupEnd = () => {
     if (!LytaConfig.debug) {
       return;
     }
-
     console.groupEnd();
   };
-
-  Lyta.init = function () {
+  Lyta.init = () => {
     if (isInitialized()) {
       return true;
     }
-
-    var scheme = 'http:' == document.location.protocol && LytaConfig.smart.forceSSL !== true ? 'http://' : 'https://';
-    var head = document.head || document.documentElement;
-    var script = document.createElement("script");
+    const scheme = 'http:' == document.location.protocol && LytaConfig.smart.forceSSL !== true ? 'http://' : 'https://';
+    const head = document.head || document.documentElement;
+    const script = document.createElement("script");
     window.sas = window.sas || {};
     var sas = window.sas;
     sas.cmd = sas.cmd || [];
-    var smartSetupParameters = {
+    let smartSetupParameters = {
       networkid: LytaConfig.smart.networkId,
       domain: scheme + LytaConfig.smart.host,
       async: true
     };
-
     if (typeof LytaConfig.uidCookieName === "string" && (uid = getCookie(LytaConfig.uidCookieName))) {
       smartSetupParameters.uid = uid;
     }
-
     Relevant.setup(smartSetupParameters);
     script.async = false;
     script.src = scheme + "ced.sascdn.com/tag/" + LytaConfig.smart.networkId + "/smart.js";
     head.insertBefore(script, head.firstChild);
-    setupAdformAdTitle(); // Use site specific ad format mapping, if available
+    setupAdformAdTitle();
+
+    // Use site specific ad format mapping, if available
     // Revert to default mapping if site specific mapping does not exist
 
-    Lyta.adFormats = adFormats[LytaConfig.site] || adFormats['default']; // Read and cache interstitial ad parameters
+    Lyta.adFormats = adFormats[LytaConfig.site] || adFormats['default'];
 
+    // Read and cache interstitial ad parameters
     Lyta.interstitialShown = getCookie(INTERSTITIAL_COOKIE);
-    Lyta.interstitialCookieExpiry = LytaConfig.interstitialCookieExpiry || INTERSTITIAL_COOKIE_EXPIRY; // Listen for MRAID viewability events if mraid is defined
+    Lyta.interstitialCookieExpiry = LytaConfig.interstitialCookieExpiry || INTERSTITIAL_COOKIE_EXPIRY;
+
+    // Listen for MRAID viewability events if mraid is defined
 
     if (typeof mraid !== "undefined") {
       queueAds = true;
       mraid.addEventListener("viewableChange", viewableChangeListener);
-    } // Use TCF v2 API if available
+    }
 
-
+    // Use TCF v2 API if available
     if (typeof window.__tcfapi == "function") {
       useTcf = true;
-      Lyta.log('__tcfapi in use. All ad loads will be deferred until TCF is ready.'); // Do stuff
-
+      Lyta.log('__tcfapi in use. All ad loads will be deferred until TCF is ready.');
+      // Do stuff
       __tcfapi('addEventListener', 2, tcfCallback);
-    } // Automatically load queued advertisements after predefined delay
+    }
 
-
+    // Automatically load queued advertisements after predefined delay
     Lyta.queueTime = LytaConfig.queueTime || AD_QUEUE_DELAY;
-
     if (LytaConfig.queueAds === true) {
       queueAds = true;
-      Lyta.log("Ad queue enabled with ".concat(Lyta.queueTime, " ms timeout."));
+      Lyta.log(`Ad queue enabled with ${Lyta.queueTime} ms timeout.`);
       processAdQueueTimeout = window.setTimeout(function () {
         processAdQueue(lowPriorityadQueue, true);
       }, Lyta.queueTime);
-    } // Lazy load ads
+    }
+
+    // Lazy load ads
     // https://github.com/verlok/lazyload
-
-
     if (LytaConfig.lazyLoadAds === true) {
-      lazyLoadAds = true; // Lazy load options
+      lazyLoadAds = true;
 
+      // Lazy load options
       window.lazyLoadOptions = {
         threshold: window.innerHeight,
         elements_selector: ".lyta-lazy-load",
-        callback_reveal: function callback_reveal(el) {
+        callback_reveal: function (el) {
           processLazyAd(el.id);
         }
-      }; // Event listener for LazyLoad init
+      };
 
+      // Event listener for LazyLoad init
       window.addEventListener("LazyLoad::Initialized", function (event) {
         Lyta.log('Lazy load: initialized');
         window.lazyLoadInstance = event.detail.instance;
-      }, false); // Event listener for LazyLoad to check the DOM again after browser has loaded all the DOM
+      }, false);
 
+      // Event listener for LazyLoad to check the DOM again after browser has loaded all the DOM
       document.addEventListener('DOMContentLoaded', function (event) {
         if (window.lazyLoadInstance) {
           Lyta.log('Lazy load: updated lazy load instance');
           window.lazyLoadInstance.update();
         }
       });
-    } // Callback for onNoad event
+    }
+
+    // Callback for onNoad event
     // Applies to all ad units
-
-
     Relevant.setOnNoad(function (data) {
       var tagId = data.tagId;
       var container = data.tagId.replace('-wrapper', '');
@@ -1392,61 +1144,53 @@ window.Lyta = function () {
       document.getElementById(container).style.display = 'none';
     });
     Lyta.initialized = true;
-    Lyta.log("Lyta version ".concat(Lyta.version, " initialized."));
+    Lyta.log(`Lyta version ${Lyta.version} initialized.`);
     return Lyta;
   };
-
-  Lyta.refresh = function (options) {
+  Lyta.refresh = options => {
     isInitialized() || Lyta.init();
     options = options === undefined ? {} : options;
-    var adUnit = options.adUnit === undefined ? false : options.adUnit;
-    var adContainer = options.adContainer === undefined ? adUnit : options.adContainer;
-    var forceMasterFlag = options.forceMasterFlag === undefined ? false : options.forceMasterFlag;
-    var resetTimestamp = options.resetTimestamp === undefined ? true : options.resetTimestamp;
-    var keywords = options.keywords === undefined ? false : options.keywords;
-
+    const adUnit = options.adUnit === undefined ? false : options.adUnit;
+    const adContainer = options.adContainer === undefined ? adUnit : options.adContainer;
+    const forceMasterFlag = options.forceMasterFlag === undefined ? false : options.forceMasterFlag;
+    const resetTimestamp = options.resetTimestamp === undefined ? true : options.resetTimestamp;
+    const keywords = options.keywords === undefined ? false : options.keywords;
     if (!adUnit) {
       Lyta.log("Refresh: Ad unit not not defined.");
       return;
     }
-
     Lyta.log(adUnit + " refresh requested, formatId = " + Lyta.adFormats[adUnit][FORMATID] + ")");
-    var adUnitName = Lyta.adFormats[adUnit][ADUNIT_NAME];
-    var target = targetOptions(adUnitName, keywords);
-    var adCall = {
+    const adUnitName = Lyta.adFormats[adUnit][ADUNIT_NAME];
+    const target = targetOptions(adUnitName, keywords);
+    const adCall = {
       forceMasterFlag: forceMasterFlag,
       resetTimestamp: resetTimestamp,
       target: serialize(target, ";")
     };
-    var adUnitWrapper = adContainer;
-
+    let adUnitWrapper = adContainer;
     if (Lyta.adFormats[adUnit][RESPONSIFY]) {
       adUnitWrapper = getWrapperId(adContainer);
     }
-
     sas.refresh(adUnitWrapper, adCall);
     Lyta.log(JSON.parse(JSON.stringify(adUnit)));
     Lyta.log(JSON.parse(JSON.stringify(adCall)));
   };
-
-  Lyta.render = function (options) {
+  Lyta.render = options => {
     isInitialized() || Lyta.init();
     options = options === undefined ? {} : options;
-    var adUnit = options.adUnit === undefined ? false : options.adUnit;
-    var adContainer = options.adContainer === undefined ? adUnit : options.adContainer;
-    var async = options.async === undefined ? true : options.async;
-    var checkVisibility = options.checkVisibility === undefined ? false : !!options.checkVisibility;
-    var onNoad = options.onNoad === undefined ? undefined : options.onNoad;
-    var adLabels = options.adLabels === undefined ? false : options.adLabels;
-    var keywords = options.keywords === undefined ? false : options.keywords;
-
+    const adUnit = options.adUnit === undefined ? false : options.adUnit;
+    const adContainer = options.adContainer === undefined ? adUnit : options.adContainer;
+    const async = options.async === undefined ? true : options.async;
+    const checkVisibility = options.checkVisibility === undefined ? false : !!options.checkVisibility;
+    const onNoad = options.onNoad === undefined ? undefined : options.onNoad;
+    const adLabels = options.adLabels === undefined ? false : options.adLabels;
+    const keywords = options.keywords === undefined ? false : options.keywords;
     if (!adUnit) {
       Lyta.log("Ad unit not not defined.");
       return;
     }
-
-    var elem = document.getElementById(adContainer);
-    var adUnitName = Lyta.adFormats[adUnit][ADUNIT_NAME];
+    const elem = document.getElementById(adContainer);
+    const adUnitName = Lyta.adFormats[adUnit][ADUNIT_NAME];
     Lyta.group(adUnit);
     Lyta.log(JSON.parse(JSON.stringify({
       call: 'Lyta.render',
@@ -1460,30 +1204,24 @@ window.Lyta = function () {
       adLabels: adLabels,
       options: options
     })));
-
     if (!Lyta.adFormats[adUnit][ENABLED_FOR_CLIENT]) {
       Lyta.log('Skipping - Not enabled');
       return Lyta.groupEnd();
     }
-
     if (elem.offsetParent === null && checkVisibility) {
       Lyta.log('Skipping - Not visible');
       return Lyta.groupEnd();
     }
-
     if (!canShowAd(adUnit)) {
       Lyta.log('Skipping - Can not show on this page load');
       return Lyta.groupEnd();
     }
-
-    var adUnitWrapper = adContainer;
-
+    let adUnitWrapper = adContainer;
     if (Lyta.adFormats[adUnit][RESPONSIFY]) {
       adUnitWrapper = responsifyAd(adContainer);
     }
-
-    var target = targetOptions(adUnitName, keywords);
-    var adCall = {
+    const target = targetOptions(adUnitName, keywords);
+    let adCall = {
       siteId: LytaConfig.smart.siteId,
       pageId: LytaConfig.smart.pageId,
       formatId: Lyta.adFormats[adUnit][FORMATID],
@@ -1491,30 +1229,27 @@ window.Lyta = function () {
       target: serialize(target, ";"),
       tagId: adUnitWrapper
     };
-
     if (typeof onNoad === "function") {
       adCall.onNoad = onNoad;
     }
-
-    var lazyAd = false;
-
+    let lazyAd = false;
     if (lazyLoadAds && elem.className.indexOf('lyta-lazy-load') > -1) {
       lazyAd = true;
-    } // Queue lower priority advertisements, call PRIORITY_ADS as soon
+    }
+
+    // Queue lower priority advertisements, call PRIORITY_ADS as soon
     // as sas is ready.
     //
     // Handle lazy load ads with lyta-lazy-load class name
 
-
-    var wasQueued = false;
-    var adCallObject = {
+    let wasQueued = false;
+    const adCallObject = {
       adUnit: adUnit,
       adCall: adCall,
       adUnitWrapper: adUnitWrapper,
       adContainer: adContainer,
       adLabels: adLabels
     };
-
     if (lazyAd) {
       lazyAdsQueue[adContainer] = adCallObject;
       wasQueued = true;
@@ -1522,9 +1257,10 @@ window.Lyta = function () {
     } else if (queueAds) {
       // If TCF is NOT in use or if TCF is ready, render high priority
       // ads immediately. TCF can only be ready if it is in use.
-      var shouldRender = !useTcf || tcfReady; // It is sufficient to check if the adUnit is in the PRIORITY_ADS array.
-      // canShowAd(adUnit) takes care of INTERSTITIAL_ADS throttling
+      const shouldRender = !useTcf || tcfReady;
 
+      // It is sufficient to check if the adUnit is in the PRIORITY_ADS array.
+      // canShowAd(adUnit) takes care of INTERSTITIAL_ADS throttling
       if (PRIORITY_ADS.indexOf(adUnit) > -1) {
         if (shouldRender) {
           Relevant.callFormat(adCall, true);
@@ -1539,19 +1275,17 @@ window.Lyta = function () {
         wasQueued = true;
         Lyta.log('Queued to low priority queue');
       }
-    } // Render ad immediately if queue is not used or already processed
+    }
+    // Render ad immediately if queue is not used or already processed
     else {
       Relevant.callFormat(adCall, true);
-    } // Show ad labels if ad was not queued
-
-
+    }
+    // Show ad labels if ad was not queued
     if (adLabels && !wasQueued) {
       showAdLabels(adUnitWrapper, adContainer);
     }
-
     Lyta.groupEnd();
   };
-
   return Lyta.init();
 }();
 
@@ -1561,26 +1295,31 @@ window.Lyta = function () {
 /*!*****************************!*\
   !*** ./src/js/outstream.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+/***/ (() => {
 
 var Injector = Injector || {};
-
 Injector.lorien = function (d) {
   var app = {};
   var pageType = '';
   var assetType = '';
-
-  var cache = function cache() {
-    if ((typeof digitalData === "undefined" ? "undefined" : _typeof(digitalData)) === 'object' && _typeof(digitalData.page) === 'object' && _typeof(digitalData.page.category) === 'object' && _typeof(digitalData.page.attributes) === 'object') {
+  var cache = function () {
+    if (typeof digitalData === 'object' && typeof digitalData.page === 'object' && typeof digitalData.page.category === 'object' && typeof digitalData.page.attributes === 'object') {
       pageType = digitalData.page.category.pageType || '';
       assetType = digitalData.page.attributes.assetType || '';
     }
-
     app.config = {
-      slot: '.js-lyta-content > p, .js-lyta-content > h2, .js-lyta-content > h3, .js-lyta-content > h4, .js-lyta-content > h5',
+      slot: `
+              .js-lyta-content > p, 
+              .js-lyta-content > h2, 
+              .js-lyta-content > h3, 
+              .js-lyta-content > h4, 
+              .js-lyta-content > h5,
+              .js-lyta-content .paywall-content > p,
+              .js-lyta-content .paywall-content > h2,
+              .js-lyta-content .paywall-content > h3,
+              .js-lyta-content .paywall-content > h4,
+              .js-lyta-content .paywall-content > h5
+              `,
       contentTopId: 'contentTop',
       contentAdIds: ['content1', 'content2', 'content3'],
       contentAdSpace: 20,
@@ -1590,11 +1329,9 @@ Injector.lorien = function (d) {
       waitForElement: true
     };
   };
-
   app.init = function () {
     cache();
     if (app.config.hasOwnProperty('runBefore')) app.config.runBefore();
-
     if (canBeInjected()) {
       if (app.config.waitForElement) {
         // Injects ContentTop and content ads when element exists
@@ -1610,35 +1347,30 @@ Injector.lorien = function (d) {
         if (app.config.hasOwnProperty('runAfter')) app.config.runAfter();
       }
     }
-  }; // Define values on which pages ContentTop can be injected
+  };
 
-
-  var canBeInjected = function canBeInjected() {
+  // Define values on which pages ContentTop can be injected
+  var canBeInjected = function () {
     var commercialTypes = ['commercial', 'advertisement'];
     return pageType == 'article' && commercialTypes.indexOf(assetType) === -1;
   };
-
-  var injectElement = function injectElement(el, referenceNode, injectInsideElement) {
+  var injectElement = function (el, referenceNode, injectInsideElement) {
     if (injectInsideElement) {
       referenceNode.appendChild(el);
     } else {
       referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
     }
   };
-
-  var elementToInject = function elementToInject(elementId, lazyLoad) {
+  var elementToInject = function (elementId, lazyLoad) {
     var osElement = d.createElement('div');
     osElement.id = elementId;
     osElement.setAttribute("data-placement-id", elementId);
-
     if (lazyLoad) {
       osElement.className = 'lyta-lazy-load';
     }
-
     return osElement;
   };
-
-  var findAdSlot = function findAdSlot(slots, start) {
+  var findAdSlot = function (slots, start) {
     // Check that the slot has two elements (p, h2, h3, h4 or h5) before and after.
     // Ignore two last iterations, there has to be two elements after the slot.
     var start = typeof start !== 'undefined' ? start - 1 : app.config.injectAfterSlot - 1;
@@ -1646,51 +1378,42 @@ Injector.lorien = function (d) {
     var validCurrentElems = ["P"];
     var slotsCount = slots.length - 2;
     var slot = 0;
-
     for (var i = start; i < slotsCount; i++) {
       var prevElemStatus = validElems.indexOf(slots[i].previousElementSibling.tagName);
       var curElemStatus = validCurrentElems.indexOf(slots[i].tagName);
       var nextElemStatus = validElems.indexOf(slots[i].nextElementSibling.tagName);
       var secondElementPos = i + 1;
       var secondElementStatus = validElems.indexOf(slots[secondElementPos].nextElementSibling.tagName);
-
       if (curElemStatus != -1 && prevElemStatus != -1 && nextElemStatus != -1 && secondElementStatus != -1) {
         slot = i;
         break;
       }
     }
-
     return slot;
   };
-
-  var injectContentAds = function injectContentAds(slots, start) {
+  var injectContentAds = function (slots, start) {
     var startSlot = start;
     var adSlot = 0;
-
-    for (var i = 0; i < app.config.contentAdIds.length; i++) {
+    for (let i = 0; i < app.config.contentAdIds.length; i++) {
       startSlot += app.config.contentAdSpace;
       adSlot = findAdSlot(slots, startSlot);
-
       if (adSlot > 0) {
         injectElement(elementToInject(app.config.contentAdIds[i], true), slots[adSlot], app.config.injectInsideElement);
         callAdvertisement(app.config.contentAdIds[i]);
         Lyta.log('Injector: injected ' + app.config.contentAdIds[i] + ' ad unit');
       }
     }
-
     if (window.lazyLoadInstance && LytaConfig.lazyLoadAds === true) {
       window.lazyLoadInstance.update();
       Lyta.log('Injector: updated lazy load instance');
     }
   };
-
-  var injectContentTopAd = function injectContentTopAd(slots, pos) {
+  var injectContentTopAd = function (slots, pos) {
     injectElement(elementToInject(app.config.contentTopId, false), slots[pos], app.config.injectInsideElement);
     callAdvertisement(app.config.contentTopId);
     Lyta.log('Injector: injected content top ad unit');
   };
-
-  var callAdvertisement = function callAdvertisement(container) {
+  var callAdvertisement = function (container) {
     try {
       Lyta.render({
         adUnit: container,
@@ -1706,31 +1429,33 @@ Injector.lorien = function (d) {
       }
     }
   };
-
-  var injectAds = function injectAds() {
+  var injectAds = function () {
     var slots = d.querySelectorAll(app.config.slot);
     Lyta.log('Injector detected ' + slots.length + ' slots');
-
     if (slots.length >= app.config.injectAfterSlot) {
-      var firstSlot = findAdSlot(slots); // minSlots is defined
-
+      var firstSlot = findAdSlot(slots);
+      // minSlots is defined
       if (app.config.hasOwnProperty('minSlots') && typeof app.config.minSlots === 'number') {
         if (slots.length >= app.config.minSlots && firstSlot > 0) {
-          Lyta.log('Injector found enough valid slots. Detected ' + slots.length + ', required ' + app.config.minSlots); // Inject Outsream ad
+          Lyta.log('Injector found enough valid slots. Detected ' + slots.length + ', required ' + app.config.minSlots);
 
-          injectContentTopAd(slots, firstSlot); // Inject content ads
+          // Inject Outsream ad
+          injectContentTopAd(slots, firstSlot);
 
+          // Inject content ads
           injectContentAds(slots, firstSlot);
         } else {
           Lyta.log('Injector: Did not inject. Not enough valid slots. Detected ' + slots.length + ', required ' + app.config.minSlots);
-        } // minSlots is not defined
-
+        }
+        // minSlots is not defined
       } else {
         if (firstSlot > 0) {
-          Lyta.log('Injector found enough valid slots. Detected ' + slots.length + ' slots.'); // Inject Outsream ad
+          Lyta.log('Injector found enough valid slots. Detected ' + slots.length + ' slots.');
 
-          injectContentTopAd(slots, firstSlot); // Inject content ads
+          // Inject Outsream ad
+          injectContentTopAd(slots, firstSlot);
 
+          // Inject content ads
           injectContentAds(slots, firstSlot);
         } else {
           Lyta.log('Injector: Did not inject. Not enough valid slots. Detected ' + slots.length);
@@ -1740,7 +1465,6 @@ Injector.lorien = function (d) {
       Lyta.log('Injector: Did not inject. Not enough slots. Detected ' + slots.length + ', required ' + app.config.injectAfterSlot);
     }
   };
-
   app.init(); // self-invoking version
 }(window.document);
 
@@ -1750,15 +1474,13 @@ Injector.lorien = function (d) {
 /*!*****************************************!*\
   !*** ./src/polyfill/custom_event_ie.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (() => {
 
 // CustomEvent micro-polyfill for Internet Explorer
 (function () {
   if (typeof window.CustomEvent === "function") {
     return false;
   }
-
   function CustomEvent(event, params) {
     params = params || {
       bubbles: false,
@@ -1769,7 +1491,6 @@ Injector.lorien = function (d) {
     evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
     return evt;
   }
-
   CustomEvent.prototype = window.Event.prototype;
   window.CustomEvent = CustomEvent;
 })();
@@ -1780,10 +1501,7 @@ Injector.lorien = function (d) {
 /*!***********************************************!*\
   !*** ./src/polyfill/intersection_observer.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+/***/ (() => {
 
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
@@ -1794,61 +1512,62 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
  *
  */
 (function () {
-  'use strict'; // Exit early if we're not running in a browser.
+  'use strict';
 
-  if ((typeof window === "undefined" ? "undefined" : _typeof(window)) !== 'object') {
+  // Exit early if we're not running in a browser.
+  if (typeof window !== 'object') {
     return;
-  } // Exit early if all IntersectionObserver and IntersectionObserverEntry
+  }
+
+  // Exit early if all IntersectionObserver and IntersectionObserverEntry
   // features are natively supported.
-
-
   if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
     // Minimal polyfill for Edge 15's lack of `isIntersecting`
     // See: https://github.com/w3c/IntersectionObserver/issues/211
     if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
       Object.defineProperty(window.IntersectionObserverEntry.prototype, 'isIntersecting', {
-        get: function get() {
+        get: function () {
           return this.intersectionRatio > 0;
         }
       });
     }
-
     return;
   }
+
   /**
    * A local reference to the document.
    */
-
-
   var document = window.document;
+
   /**
    * An IntersectionObserver registry. This registry exists to hold a strong
    * reference to IntersectionObserver instances currently observing a target
    * element. Without this registry, instances without another reference may be
    * garbage collected.
    */
-
   var registry = [];
+
   /**
    * Creates the global IntersectionObserverEntry constructor.
    * https://w3c.github.io/IntersectionObserver/#intersection-observer-entry
    * @param {Object} entry A dictionary of instance properties.
    * @constructor
    */
-
   function IntersectionObserverEntry(entry) {
     this.time = entry.time;
     this.target = entry.target;
     this.rootBounds = entry.rootBounds;
     this.boundingClientRect = entry.boundingClientRect;
     this.intersectionRect = entry.intersectionRect || getEmptyRect();
-    this.isIntersecting = !!entry.intersectionRect; // Calculates the intersection ratio.
+    this.isIntersecting = !!entry.intersectionRect;
 
+    // Calculates the intersection ratio.
     var targetRect = this.boundingClientRect;
     var targetArea = targetRect.width * targetRect.height;
     var intersectionRect = this.intersectionRect;
-    var intersectionArea = intersectionRect.width * intersectionRect.height; // Sets intersection ratio.
+    var intersectionArea = intersectionRect.width * intersectionRect.height;
 
+    // Sets intersection ratio.
     if (targetArea) {
       // Round the intersection ratio to avoid floating point math issues:
       // https://github.com/w3c/IntersectionObserver/issues/324
@@ -1858,6 +1577,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       this.intersectionRatio = this.isIntersecting ? 1 : 0;
     }
   }
+
   /**
    * Creates the global IntersectionObserver constructor.
    * https://w3c.github.io/IntersectionObserver/#intersection-observer-interface
@@ -1867,126 +1587,110 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    * @param {Object=} opt_options Optional configuration options.
    * @constructor
    */
-
-
   function IntersectionObserver(callback, opt_options) {
     var options = opt_options || {};
-
     if (typeof callback != 'function') {
       throw new Error('callback must be a function');
     }
-
     if (options.root && options.root.nodeType != 1) {
       throw new Error('root must be an Element');
-    } // Binds and throttles `this._checkForIntersections`.
+    }
 
+    // Binds and throttles `this._checkForIntersections`.
+    this._checkForIntersections = throttle(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT);
 
-    this._checkForIntersections = throttle(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT); // Private properties.
-
+    // Private properties.
     this._callback = callback;
     this._observationTargets = [];
     this._queuedEntries = [];
-    this._rootMarginValues = this._parseRootMargin(options.rootMargin); // Public properties.
+    this._rootMarginValues = this._parseRootMargin(options.rootMargin);
 
+    // Public properties.
     this.thresholds = this._initThresholds(options.threshold);
     this.root = options.root || null;
     this.rootMargin = this._rootMarginValues.map(function (margin) {
       return margin.value + margin.unit;
     }).join(' ');
   }
+
   /**
    * The minimum interval within which the document will be checked for
    * intersection changes.
    */
-
-
   IntersectionObserver.prototype.THROTTLE_TIMEOUT = 100;
+
   /**
    * The frequency in which the polyfill polls for intersection changes.
    * this can be updated on a per instance basis and must be set prior to
    * calling `observe` on the first target.
    */
-
   IntersectionObserver.prototype.POLL_INTERVAL = null;
+
   /**
    * Use a mutation observer on the root element
    * to detect intersection changes.
    */
-
   IntersectionObserver.prototype.USE_MUTATION_OBSERVER = true;
+
   /**
    * Starts observing a target element for intersection changes based on
    * the thresholds values.
    * @param {Element} target The DOM element to observe.
    */
-
   IntersectionObserver.prototype.observe = function (target) {
     var isTargetAlreadyObserved = this._observationTargets.some(function (item) {
       return item.element == target;
     });
-
     if (isTargetAlreadyObserved) {
       return;
     }
-
     if (!(target && target.nodeType == 1)) {
       throw new Error('target must be an Element');
     }
-
     this._registerInstance();
-
     this._observationTargets.push({
       element: target,
       entry: null
     });
-
     this._monitorIntersections();
-
     this._checkForIntersections();
   };
+
   /**
    * Stops observing a target element for intersection changes.
    * @param {Element} target The DOM element to observe.
    */
-
-
   IntersectionObserver.prototype.unobserve = function (target) {
     this._observationTargets = this._observationTargets.filter(function (item) {
       return item.element != target;
     });
-
     if (!this._observationTargets.length) {
       this._unmonitorIntersections();
-
       this._unregisterInstance();
     }
   };
+
   /**
    * Stops observing all target elements for intersection changes.
    */
-
-
   IntersectionObserver.prototype.disconnect = function () {
     this._observationTargets = [];
-
     this._unmonitorIntersections();
-
     this._unregisterInstance();
   };
+
   /**
    * Returns any queue entries that have not yet been reported to the
    * callback and clears the queue. This can be used in conjunction with the
    * callback to obtain the absolute most up-to-date intersection information.
    * @return {Array} The currently queued entries.
    */
-
-
   IntersectionObserver.prototype.takeRecords = function () {
     var records = this._queuedEntries.slice();
-
     this._queuedEntries = [];
     return records;
   };
+
   /**
    * Accepts the threshold value from the user configuration object and
    * returns a sorted array of unique threshold values. If a value is not
@@ -1996,8 +1700,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    *     a list of threshold values, defaulting to [0].
    * @return {Array} A sorted list of unique and valid threshold values.
    */
-
-
   IntersectionObserver.prototype._initThresholds = function (opt_threshold) {
     var threshold = opt_threshold || [0];
     if (!Array.isArray(threshold)) threshold = [threshold];
@@ -2005,10 +1707,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       if (typeof t != 'number' || isNaN(t) || t < 0 || t > 1) {
         throw new Error('threshold must be a number between 0 and 1 inclusively');
       }
-
       return t !== a[i - 1];
     });
   };
+
   /**
    * Accepts the rootMargin value from the user configuration object
    * and returns an array of the four margin values as an object containing
@@ -2020,49 +1722,44 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    * @return {Array<Object>} An array of margin objects with the keys
    *     value and unit.
    */
-
-
   IntersectionObserver.prototype._parseRootMargin = function (opt_rootMargin) {
     var marginString = opt_rootMargin || '0px';
     var margins = marginString.split(/\s+/).map(function (margin) {
       var parts = /^(-?\d*\.?\d+)(px|%)$/.exec(margin);
-
       if (!parts) {
         throw new Error('rootMargin must be specified in pixels or percent');
       }
-
       return {
         value: parseFloat(parts[1]),
         unit: parts[2]
       };
-    }); // Handles shorthand.
+    });
 
+    // Handles shorthand.
     margins[1] = margins[1] || margins[0];
     margins[2] = margins[2] || margins[0];
     margins[3] = margins[3] || margins[1];
     return margins;
   };
+
   /**
    * Starts polling for intersection changes if the polling is not already
    * happening, and if the page's visibility state is visible.
    * @private
    */
-
-
   IntersectionObserver.prototype._monitorIntersections = function () {
     if (!this._monitoringIntersections) {
-      this._monitoringIntersections = true; // If a poll interval is set, use polling instead of listening to
-      // resize and scroll events or DOM mutations.
+      this._monitoringIntersections = true;
 
+      // If a poll interval is set, use polling instead of listening to
+      // resize and scroll events or DOM mutations.
       if (this.POLL_INTERVAL) {
         this._monitoringInterval = setInterval(this._checkForIntersections, this.POLL_INTERVAL);
       } else {
         addEvent(window, 'resize', this._checkForIntersections, true);
         addEvent(document, 'scroll', this._checkForIntersections, true);
-
         if (this.USE_MUTATION_OBSERVER && 'MutationObserver' in window) {
           this._domObserver = new MutationObserver(this._checkForIntersections);
-
           this._domObserver.observe(document, {
             attributes: true,
             childList: true,
@@ -2073,12 +1770,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       }
     }
   };
+
   /**
    * Stops polling for intersection changes.
    * @private
    */
-
-
   IntersectionObserver.prototype._unmonitorIntersections = function () {
     if (this._monitoringIntersections) {
       this._monitoringIntersections = false;
@@ -2086,37 +1782,28 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       this._monitoringInterval = null;
       removeEvent(window, 'resize', this._checkForIntersections, true);
       removeEvent(document, 'scroll', this._checkForIntersections, true);
-
       if (this._domObserver) {
         this._domObserver.disconnect();
-
         this._domObserver = null;
       }
     }
   };
+
   /**
    * Scans each observation target for intersection changes and adds them
    * to the internal entries queue. If new entries are found, it
    * schedules the callback to be invoked.
    * @private
    */
-
-
   IntersectionObserver.prototype._checkForIntersections = function () {
     var rootIsInDom = this._rootIsInDom();
-
     var rootRect = rootIsInDom ? this._getRootRect() : getEmptyRect();
-
     this._observationTargets.forEach(function (item) {
       var target = item.element;
       var targetRect = getBoundingClientRect(target);
-
       var rootContainsTarget = this._rootContainsTarget(target);
-
       var oldEntry = item.entry;
-
       var intersectionRect = rootIsInDom && rootContainsTarget && this._computeTargetAndRootIntersection(target, rootRect);
-
       var newEntry = item.entry = new IntersectionObserverEntry({
         time: now(),
         target: target,
@@ -2124,7 +1811,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         rootBounds: rootRect,
         intersectionRect: intersectionRect
       });
-
       if (!oldEntry) {
         this._queuedEntries.push(newEntry);
       } else if (rootIsInDom && rootContainsTarget) {
@@ -2142,11 +1828,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         }
       }
     }, this);
-
     if (this._queuedEntries.length) {
       this._callback(this.takeRecords(), this);
     }
   };
+
   /**
    * Accepts a target and root rect computes the intersection between then
    * following the algorithm in the spec.
@@ -2159,8 +1845,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    *     intersection is found.
    * @private
    */
-
-
   IntersectionObserver.prototype._computeTargetAndRootIntersection = function (target, rootRect) {
     // If the element isn't displayed, an intersection can't happen.
     if (window.getComputedStyle(target).display == 'none') return;
@@ -2168,13 +1852,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     var intersectionRect = targetRect;
     var parent = getParentNode(target);
     var atRoot = false;
-
     while (!atRoot) {
       var parentRect = null;
-      var parentComputedStyle = parent.nodeType == 1 ? window.getComputedStyle(parent) : {}; // If the parent isn't displayed, an intersection can't happen.
+      var parentComputedStyle = parent.nodeType == 1 ? window.getComputedStyle(parent) : {};
 
+      // If the parent isn't displayed, an intersection can't happen.
       if (parentComputedStyle.display == 'none') return;
-
       if (parent == this.root || parent == document) {
         atRoot = true;
         parentRect = rootRect;
@@ -2186,30 +1869,26 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         if (parent != document.body && parent != document.documentElement && parentComputedStyle.overflow != 'visible') {
           parentRect = getBoundingClientRect(parent);
         }
-      } // If either of the above conditionals set a new parentRect,
+      }
+
+      // If either of the above conditionals set a new parentRect,
       // calculate new intersection data.
-
-
       if (parentRect) {
         intersectionRect = computeRectIntersection(parentRect, intersectionRect);
         if (!intersectionRect) break;
       }
-
       parent = getParentNode(parent);
     }
-
     return intersectionRect;
   };
+
   /**
    * Returns the root rect after being expanded by the rootMargin value.
    * @return {Object} The expanded root rect.
    * @private
    */
-
-
   IntersectionObserver.prototype._getRootRect = function () {
     var rootRect;
-
     if (this.root) {
       rootRect = getBoundingClientRect(this.root);
     } else {
@@ -2225,22 +1904,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         height: html.clientHeight || body.clientHeight
       };
     }
-
     return this._expandRectByRootMargin(rootRect);
   };
+
   /**
    * Accepts a rect and expands it by the rootMargin value.
    * @param {Object} rect The rect object to expand.
    * @return {Object} The expanded rect.
    * @private
    */
-
-
   IntersectionObserver.prototype._expandRectByRootMargin = function (rect) {
     var margins = this._rootMarginValues.map(function (margin, i) {
       return margin.unit == 'px' ? margin.value : margin.value * (i % 2 ? rect.width : rect.height) / 100;
     });
-
     var newRect = {
       top: rect.top - margins[0],
       right: rect.right + margins[1],
@@ -2251,6 +1927,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     newRect.height = newRect.bottom - newRect.top;
     return newRect;
   };
+
   /**
    * Accepts an old and new entry and returns true if at least one of the
    * threshold values has been crossed.
@@ -2261,78 +1938,73 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    * @return {boolean} Returns true if a any threshold has been crossed.
    * @private
    */
-
-
   IntersectionObserver.prototype._hasCrossedThreshold = function (oldEntry, newEntry) {
     // To make comparing easier, an entry that has a ratio of 0
     // but does not actually intersect is given a value of -1
     var oldRatio = oldEntry && oldEntry.isIntersecting ? oldEntry.intersectionRatio || 0 : -1;
-    var newRatio = newEntry.isIntersecting ? newEntry.intersectionRatio || 0 : -1; // Ignore unchanged ratios
+    var newRatio = newEntry.isIntersecting ? newEntry.intersectionRatio || 0 : -1;
 
+    // Ignore unchanged ratios
     if (oldRatio === newRatio) return;
-
     for (var i = 0; i < this.thresholds.length; i++) {
-      var threshold = this.thresholds[i]; // Return true if an entry matches a threshold or if the new ratio
-      // and the old ratio are on the opposite sides of a threshold.
+      var threshold = this.thresholds[i];
 
+      // Return true if an entry matches a threshold or if the new ratio
+      // and the old ratio are on the opposite sides of a threshold.
       if (threshold == oldRatio || threshold == newRatio || threshold < oldRatio !== threshold < newRatio) {
         return true;
       }
     }
   };
+
   /**
    * Returns whether or not the root element is an element and is in the DOM.
    * @return {boolean} True if the root element is an element and is in the DOM.
    * @private
    */
-
-
   IntersectionObserver.prototype._rootIsInDom = function () {
     return !this.root || containsDeep(document, this.root);
   };
+
   /**
    * Returns whether or not the target element is a child of root.
    * @param {Element} target The target element to check.
    * @return {boolean} True if the target element is a child of root.
    * @private
    */
-
-
   IntersectionObserver.prototype._rootContainsTarget = function (target) {
     return containsDeep(this.root || document, target);
   };
+
   /**
    * Adds the instance to the global IntersectionObserver registry if it isn't
    * already present.
    * @private
    */
-
-
   IntersectionObserver.prototype._registerInstance = function () {
     if (registry.indexOf(this) < 0) {
       registry.push(this);
     }
   };
+
   /**
    * Removes the instance from the global IntersectionObserver registry.
    * @private
    */
-
-
   IntersectionObserver.prototype._unregisterInstance = function () {
     var index = registry.indexOf(this);
     if (index != -1) registry.splice(index, 1);
   };
+
   /**
    * Returns the result of the performance.now() method or null in browsers
    * that don't support the API.
    * @return {number} The elapsed time since the page was requested.
    */
-
-
   function now() {
     return window.performance && performance.now && performance.now();
   }
+
   /**
    * Throttles a function and delays its execution, so it's only called at most
    * once within a given time period.
@@ -2341,8 +2013,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    *     function can be called again.
    * @return {Function} The throttled function.
    */
-
-
   function throttle(fn, timeout) {
     var timer = null;
     return function () {
@@ -2354,6 +2024,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       }
     };
   }
+
   /**
    * Adds an event handler to a DOM node ensuring cross-browser compatibility.
    * @param {Node} node The DOM node to add the event handler to.
@@ -2362,8 +2033,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    * @param {boolean} opt_useCapture Optionally adds the even to the capture
    *     phase. Note: this only works in modern browsers.
    */
-
-
   function addEvent(node, event, fn, opt_useCapture) {
     if (typeof node.addEventListener == 'function') {
       node.addEventListener(event, fn, opt_useCapture || false);
@@ -2371,6 +2040,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       node.attachEvent('on' + event, fn);
     }
   }
+
   /**
    * Removes a previously added event handler from a DOM node.
    * @param {Node} node The DOM node to remove the event handler from.
@@ -2379,8 +2049,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    * @param {boolean} opt_useCapture If the event handler was added with this
    *     flag set to true, it should be set to true here in order to remove it.
    */
-
-
   function removeEvent(node, event, fn, opt_useCapture) {
     if (typeof node.removeEventListener == 'function') {
       node.removeEventListener(event, fn, opt_useCapture || false);
@@ -2388,6 +2056,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       node.detatchEvent('on' + event, fn);
     }
   }
+
   /**
    * Returns the intersection between two rect objects.
    * @param {Object} rect1 The first rect.
@@ -2395,8 +2064,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    * @return {?Object} The intersection rect or undefined if no intersection
    *     is found.
    */
-
-
   function computeRectIntersection(rect1, rect2) {
     var top = Math.max(rect1.top, rect2.top);
     var bottom = Math.min(rect1.bottom, rect2.bottom);
@@ -2413,24 +2080,23 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       height: height
     };
   }
+
   /**
    * Shims the native getBoundingClientRect for compatibility with older IE.
    * @param {Element} el The element whose bounding rect to get.
    * @return {Object} The (possibly shimmed) rect of the element.
    */
-
-
   function getBoundingClientRect(el) {
     var rect;
-
     try {
       rect = el.getBoundingClientRect();
-    } catch (err) {// Ignore Windows 7 IE11 "Unspecified error"
+    } catch (err) {
+      // Ignore Windows 7 IE11 "Unspecified error"
       // https://github.com/w3c/IntersectionObserver/pull/205
     }
+    if (!rect) return getEmptyRect();
 
-    if (!rect) return getEmptyRect(); // Older IE
-
+    // Older IE
     if (!(rect.width && rect.height)) {
       rect = {
         top: rect.top,
@@ -2441,16 +2107,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         height: rect.bottom - rect.top
       };
     }
-
     return rect;
   }
+
   /**
    * Returns an empty rect object. An empty rect is returned when an element
    * is not in the DOM.
    * @return {Object} The empty rect.
    */
-
-
   function getEmptyRect() {
     return {
       top: 0,
@@ -2461,6 +2125,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       height: 0
     };
   }
+
   /**
    * Checks to see if a parent element contains a child element (including inside
    * shadow DOM).
@@ -2468,48 +2133,81 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
    * @param {Node} child The child element.
    * @return {boolean} True if the parent node contains the child node.
    */
-
-
   function containsDeep(parent, child) {
     var node = child;
-
     while (node) {
       if (node == parent) return true;
       node = getParentNode(node);
     }
-
     return false;
   }
+
   /**
    * Gets the parent node of an element or its host element if the parent node
    * is a shadow root.
    * @param {Node} node The node whose parent to get.
    * @return {Node|null} The parent node or null if no parent exists.
    */
-
-
   function getParentNode(node) {
     var parent = node.parentNode;
-
     if (parent && parent.nodeType == 11 && parent.host) {
       // If the parent is a shadow root, return the host element.
       return parent.host;
     }
-
     if (parent && parent.assignedSlot) {
       // If the parent is distributed in a <slot>, return the parent of a slot.
       return parent.assignedSlot.parentNode;
     }
-
     return parent;
-  } // Exposes the constructors globally.
+  }
 
-
+  // Exposes the constructors globally.
   window.IntersectionObserver = IntersectionObserver;
   window.IntersectionObserverEntry = IntersectionObserverEntry;
 })();
 
 /***/ })
 
-/******/ });
-//# sourceMappingURL=lyta.js.map 
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__(/*! ./src/polyfill/custom_event_ie.js */ "./src/polyfill/custom_event_ie.js");
+__webpack_require__(/*! ./src/polyfill/intersection_observer.js */ "./src/polyfill/intersection_observer.js");
+__webpack_require__(/*! ./src/js/lyta.js */ "./src/js/lyta.js");
+__webpack_require__(/*! ./src/js/outstream.js */ "./src/js/outstream.js");
+__webpack_require__(/*! ./src/js/lazyload.min.js */ "./src/js/lazyload.min.js");
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=lyta.js.map
